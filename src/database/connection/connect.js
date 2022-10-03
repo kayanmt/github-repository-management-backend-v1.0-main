@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 export class MongoDbConnection {
   static async connectDb() {
     await mongoose
-      .connect(process.env.MONGO_URI, {
+      .connect(process.env.URI_DATABASE, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       })
